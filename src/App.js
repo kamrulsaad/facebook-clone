@@ -1,6 +1,10 @@
+import Navbar from './Components/Shared/Navbar'
+
 function App() {
   return (
     <div >
+      <Navbar/>
+      
     </div>
   );
 }
