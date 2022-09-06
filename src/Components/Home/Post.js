@@ -8,9 +8,7 @@ import { Share } from '@mui/icons-material';
 const Post = ({post}) => {
 
     const {user, image, shared, caption} = post
-
     const currentUser = JSON.parse(localStorage.getItem('user'))
-
     const [liked, setLiked] = useState(post.liked)
     const [comments, setComments] = useState(post.comments)
     const [count, setCount] = useState(post.likes)
@@ -28,8 +26,6 @@ const Post = ({post}) => {
         setComments([ newComment, ...comments])
         e.target.reset()
     }
-
-    console.log(comments);
 
     return (
         <div className='bg-white mb-3 rounded-lg mx-auto max-w-lg shadow-lg'>
