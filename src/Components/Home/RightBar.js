@@ -8,12 +8,12 @@ const RightBar = () => {
         var requestOptions = {
             method: 'GET',
             redirect: 'follow'
-          };
-          
-          fetch("http://localhost:5000/allUsers", requestOptions)
+        };
+
+        fetch("https://react-social-clone.herokuapp.com/allUsers", requestOptions)
             .then(response => response.json())
-            .then(result => setUsers(result.slice(0,8)))
-    },[])
+            .then(result => setUsers(result.slice(0, 8)))
+    }, [])
 
     return (
         <div className='flex-[3] hidden md:block sticky top-[3rem] max-h-screen'>
@@ -42,12 +42,12 @@ const RightBar = () => {
             </h3>
             {
                 user.map((u, index) => <div key={index} className=' px-0 mt-2 flex items-center transition-all duration-150 gap-2'>
-                <div className='relative rounded-full'>
-                    <img className='w-10 h-10 rounded-full object-cover' src={u.profile_picture} alt="" />
-                    <div className='bg-green-400 p-1 w-1 rounded-full absolute top-0 left-7 outline outline-stone-100'></div>
-                </div>
-                <p className='font-medium'>{u.full_name}</p>
-            </div>)
+                    <div className='relative rounded-full'>
+                        <img className='w-10 h-10 rounded-full object-cover' src={u.profile_picture} alt="" />
+                        <div className='bg-green-400 p-1 w-1 rounded-full absolute top-0 left-7 outline outline-stone-100'></div>
+                    </div>
+                    <p className='font-medium'>{u.full_name}</p>
+                </div>)
             }
         </div>
     );

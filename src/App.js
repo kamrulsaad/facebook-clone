@@ -13,7 +13,7 @@ function App() {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:5000/fb_posts", requestOptions)
+    fetch("https://react-social-clone.herokuapp.com/fb_posts", requestOptions)
       .then(response => response.json())
       .then(result => {
         setPosts(result.posts)

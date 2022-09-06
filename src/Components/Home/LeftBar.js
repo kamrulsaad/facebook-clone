@@ -8,7 +8,7 @@ import HistoryIcon from '@mui/icons-material/History';
 
 const LeftBar = ({user}) => {
     return (
-        <div className='flex-[3] hidden md:block sticky top-[3rem] w-full max-h-screen'>
+        <div className='flex-[3] hidden md:block sticky top-[3rem] w-full max-h-screen min-h-screen'>
             <div className='cursor-pointer p-2 mx-2 mt-2 flex items-center transition-all duration-150 gap-2 hover:bg-white hover:shadow-md hover:rounded-lg'>
                 <img className='w-10 h-10 rounded-full object-cover' src={user.profile_picture} alt="" />
                 <p className='font-medium'>{user.username}</p>
