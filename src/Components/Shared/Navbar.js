@@ -10,7 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
-const Navbar = () => {
+const Navbar = ({user}) => {
     return (
         <div className='bg-white md:px-6 px-4 flex justify-between items-center border-b h-12 border-slate-300 shadow-md sticky top-0 z-50'>
             <div className='flex'>
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <NotificationsActiveIcon></NotificationsActiveIcon>
                 </div>
                 <div className='cursor-pointer'>
-                    <img className='w-10 h-10 rounded-full object-cover' src="assets/photo-1607569490015-7101095605ed.webp" alt="" />
+                    <img className='w-10 h-10 rounded-full object-cover' src={user.profile_picture} alt="" />
                 </div>
             </div>
         </div>
