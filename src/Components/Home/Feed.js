@@ -5,6 +5,10 @@ const Feed = () => {
     return (
         <div className='flex-[5]'>
             <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
         </div>
     );
 };
